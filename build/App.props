@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="Common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>$(AwsTargetFramework)</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="$(PropsPath)..\src\Shared\BLambda.Abstructions\BLambda.Abstructions.csproj" />
+		<ProjectReference Include="$(PropsPath)..\src\Shared\BLambda\BLambda.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>

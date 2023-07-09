@@ -1,0 +1,37 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="App.props" />
+	<Import Project="NSwag.targets" />
+	<Import Project="$(PropsPath)..\src\API\BLambda.Will.NSwag\BLambda.Will.NSwag.projitems" Label="Shared" />
+	
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AWSProjectType>Lambda</AWSProjectType>
+		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<!-- This property makes the build directory similar to a publish directory and helps the AWS .NET Lambda Mock Test Tool find project dependencies. -->
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<!-- Generate ready to run images during publishing to improve cold start time. -->
+		<PublishReadyToRun>true</PublishReadyToRun>
+		
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+
+		<!--
+		<TieredCompilation>false</TieredCompilation>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+		<PublishTrimmed>true</PublishTrimmed>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<TrimMode>link</TrimMode>
+		<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+		<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+		<EventSourceSupport>false</EventSourceSupport>
+		<DebuggerSupport>false</DebuggerSupport>
+		-->
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="$(PropsPath)..\src\API\BLambda.Will\BLambda.Will.csproj" />
+	</ItemGroup>
+</Project>

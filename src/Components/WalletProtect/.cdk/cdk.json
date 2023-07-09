@@ -1,0 +1,6 @@
+{
+    "app": "dotnet run --project ../Blambda.Provision.WalletProtect/Blambda.Provision.WalletProtect.csproj",
+    "versionReporting": "false",
+    "pathMetadata": "false",
+    "requireApproval": "never"
+}

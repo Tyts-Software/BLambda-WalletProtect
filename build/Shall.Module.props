@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="Shall.props" />
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<!--<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<CopyDestionationPath>..\..\BLambda.Shall\wwwroot\_modules</CopyDestionationPath>
+	</PropertyGroup>-->
+
+	<!--<Target Name="CopyOutputToDestination" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+
+		<ItemGroup>
+			<OutputFiles Include="$(OutDir)**\*"></OutputFiles>
+		</ItemGroup>
+
+		<Message Text="Copying output file to destination: @(OutputFiles)" Importance="high" />
+
+		<Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(CopyDestionationPath)\$(ProjectName)\%(RecursiveDir)" OverwriteReadOnlyFiles="true"></Copy>
+
+	</Target>-->
+
+	<ItemGroup>
+		<ProjectReference Include="$(PropsPath)..\src\UI\BLambda.Shall.Shared\BLambda.Shall.Shared.csproj" />
+	</ItemGroup>
+
+
+</Project>

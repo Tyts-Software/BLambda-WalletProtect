@@ -1,0 +1,27 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<AwsTargetFramework>net6.0</AwsTargetFramework>
+		<BlazorTargetFramework>net7.0</BlazorTargetFramework>
+		<PropsPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</PropsPath>
+
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<VersionSuffix>alpha</VersionSuffix>
+		<VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(BuildNumber)' != ''">$(VersionSuffix)-$(BuildNumber)</VersionSuffix>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<WarningsNotAsErrors>612,618</WarningsNotAsErrors>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<DebugType>portable</DebugType>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+
+		<!-- Common NuGet properties-->
+
+		<!--This is used to generate symbol package for Source Link-->
+
+		<!-- This is used by GitHub Repository to find which repository should contain the package when updloaded -->
+
+	</PropertyGroup>
+</Project>

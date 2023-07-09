@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".doc", ".doc", "{D74CB7A5-7392-46C6-AB1B-9EE2D5C608E3}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution items", ".solution items", "{5219F012-656C-426E-A387-B9FAF329EEDC}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{C3FB16EF-9C44-4BF5-85A6-D3B64F7F1981}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WalletProtect", "WalletProtect", "{7C9B709A-2ACD-49D2-B9C6-1F514D000631}"
+	ProjectSection(SolutionItems) = preProject
+		Components\WalletProtect\Readme.md = Components\WalletProtect\Readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLambda.Provision.WalletProtect", "Components\WalletProtect\Blambda.Provision.WalletProtect\BLambda.Provision.WalletProtect.csproj", "{55981E1B-8F04-4DEB-9A6E-02E0D19801F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{087FA7F5-C109-4C8E-8E55-9FDFD7EC7EA2}"
+	ProjectSection(SolutionItems) = preProject
+		Components\WalletProtect\delete-walletprotect.ps1 = Components\WalletProtect\delete-walletprotect.ps1
+		Components\WalletProtect\deploy.ps1 = Components\WalletProtect\deploy.ps1
+		Components\WalletProtect\~deploy.ps1 = Components\WalletProtect\~deploy.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLambda.Functions.LockLambdas", "Components\WalletProtect\BLambda.Functions.LockLambdas\BLambda.Functions.LockLambdas.csproj", "{D90583CA-15EA-4532-9858-DA208CC7B631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55981E1B-8F04-4DEB-9A6E-02E0D19801F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55981E1B-8F04-4DEB-9A6E-02E0D19801F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55981E1B-8F04-4DEB-9A6E-02E0D19801F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55981E1B-8F04-4DEB-9A6E-02E0D19801F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90583CA-15EA-4532-9858-DA208CC7B631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90583CA-15EA-4532-9858-DA208CC7B631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90583CA-15EA-4532-9858-DA208CC7B631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90583CA-15EA-4532-9858-DA208CC7B631}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C9B709A-2ACD-49D2-B9C6-1F514D000631} = {C3FB16EF-9C44-4BF5-85A6-D3B64F7F1981}
+		{55981E1B-8F04-4DEB-9A6E-02E0D19801F7} = {7C9B709A-2ACD-49D2-B9C6-1F514D000631}
+		{087FA7F5-C109-4C8E-8E55-9FDFD7EC7EA2} = {7C9B709A-2ACD-49D2-B9C6-1F514D000631}
+		{D90583CA-15EA-4532-9858-DA208CC7B631} = {7C9B709A-2ACD-49D2-B9C6-1F514D000631}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33C7ED78-79DE-40A0-BF23-929A2F88DEA3}
+	EndGlobalSection
+EndGlobal

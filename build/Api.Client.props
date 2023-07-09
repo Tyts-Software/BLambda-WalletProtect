@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="Common.props" />
+	<PropertyGroup>
+		<TargetFramework>$(AwsTargetFramework)</TargetFramework>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="$(PropsPath)..\src\API\BLambda.Will.Client\BLambda.Will.Client.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		
+	</ItemGroup>
+</Project>

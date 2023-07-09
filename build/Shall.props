@@ -1,0 +1,52 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="Common.props" />
+	<PropertyGroup>
+		<TargetFramework>$(BlazorTargetFramework)</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<VersionSuffix>build.0</VersionSuffix>
+		<!--<VersionSuffix>build.$([System.DateTime]::UtcNow.ToString(mmff))</VersionSuffix>-->
+
+
+		<Company>Tyts</Company>
+		<Authors>Tyts</Authors>
+		<Copyright>Copyright © Tyts $([System.DateTime]::Now.ToString(yyyy))</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>c:\Work\My\.nuget.local\</PackageOutputPath>
+	</PropertyGroup>
+
+
+	<!--<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<Optimize>False</Optimize>
+		<WarningLevel>6</WarningLevel>
+		<NullableReferenceTypes>true</NullableReferenceTypes>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<NoWarn>1701;1702;8669;1591;1816</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<Optimize>True</Optimize>
+		<NoWarn>1701;1702;8669;1591</NoWarn>
+		<DebuggerSupport>false</DebuggerSupport>
+		<TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+	</PropertyGroup>-->
+	
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="$(PropsPath)..\src\Shared\BLambda.Abstructions\BLambda.Abstructions.csproj" />
+		<ProjectReference Include="$(PropsPath)..\src\Shared\BLambda\BLambda.csproj" />
+		<ProjectReference Include="$(PropsPath)..\src\API\BLambda.Will.Client\BLambda.Will.Client.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.2" />
+		<PackageReference Include="Microsoft.Fast.Components.FluentUI" Version="2.0.*-*" />
+	</ItemGroup>
+</Project>
