@@ -11,19 +11,19 @@ Install or update the [latest tooling](https://github.com/aws/aws-extensions-for
 
 Install or update the latest [Lambda function templates](https://github.com/aws/aws-lambda-dotnet/).
 
-`dotnet new --install Amazon.Lambda.Templates
+`dotnet new --install Amazon.Lambda.Templates`
 
 ### [CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
 
 `cdk --version`
 
 
-CLI is not compatible with the CDK library
+if CLI is not compatible with the CDK library
 
 `npm uninstall -g aws-cdk && npm install -g aws-cdk`
 
 #### Bootstrap
-Deploys the CDK Toolkit staging stack
+Deploys the CDK Toolkit (account-id/region)
 `cdk bootstrap 1111111111/eu-central-1` 
 
 
