@@ -13,20 +13,23 @@ Install or update the latest [Lambda function templates](https://github.com/aws/
 
 `dotnet new --install Amazon.Lambda.Templates`
 
-### [CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
+### Setup IaC [CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
+
+Before use you should deploy CDK Toolkit to your account-id/region
+
+`cdk bootstrap 1111111111/eu-central-1` 
+
+### Troubleshooting
+
+Check version 
 
 `cdk --version`
-
 
 if CLI is not compatible with the CDK library
 
 `npm uninstall -g aws-cdk && npm install -g aws-cdk`
 
-#### Bootstrap
-Deploys the CDK Toolkit (account-id/region)
-`cdk bootstrap 1111111111/eu-central-1` 
-
-
+## Other 
 
 - [Blazor component library for FluentUI](https://github.com/microsoft/fast-blazor)
 - [NSwag](https://github.com/RicoSuter/NSwag)
